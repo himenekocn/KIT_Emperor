@@ -578,6 +578,33 @@ stock bool EMP_IsClientOnGround(int client)
 }
 
 /**
+* Checks if the client is currently on the ground
+*
+* @param client				Player index
+* @return					Returns True if the clients is on the ground otherwise false
+*/
+stock bool EMP_IsClientSwimming(int client)
+{
+	if((GetEntityFlags(client) & FL_INWATER || GetEntityFlags(client) & FL_SWIM))
+		return true;
+
+	return false;
+}
+
+/**
+* Gets the flag from a ConVar
+*
+* @param cvar				ConVar to read from
+* @return					Returns the int value of the flag given as a letter. (-1 if the flag is incorrect)
+*/
+stock int EMP_Flag_StringToIntComp(ConVar cvar)
+{
+	char flag[8];
+	cvar.GetString(flag, sizeof(flag));
+	return EMP_Flag_StringToInt(flag);
+}
+
+/**
 * Convert flag from char to int
 *
 * @param buffer				Buffer to read the flag letter from

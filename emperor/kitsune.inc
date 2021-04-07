@@ -17,28 +17,9 @@
  * You should have received a copy of the GNU General Public License along with
  * this program.  If not, see <http://www.gnu.org/licenses/>.
  */
- 
-#if !defined _smlib_included
-	#include <smlib>
-#endif
 
-#if !defined _emitsoundany_included
-	#include <emitsoundany>
-#endif
-
-#if defined _emperor_included
+#if defined _emperor_kitsune_included
 	#endinput
 #endif
-#define _emperor_included
+#define _emperor_kitsune_included
 
-#define EMPEROR_VERSION "3.1"
-
-#include <emperor/clients>
-#include <emperor/files>
-#include <emperor/weapons>
-#include <emperor/messages>
-#include <emperor/variables>
-#include <emperor/debug>
-#include <emperor/entities>
-#include <emperor/menus>
-#include <emperor/game>

@@ -83,9 +83,10 @@ stock void EMP_SetLogFile(char path[PLATFORM_MAX_PATH], char[] file, char[] fold
 	BuildPath(Path_SM, path, sizeof(path), path);
 }
 
-stock bool EMP_PreDownload(const char[] path)
+stock void EMP_PreDownload(const char[] path)
 {
-    return FileExists(path) && AddFileToDownloadsTable(path);
+	if (FileExists(path))
+		AddFileToDownloadsTable(path);
 }
 
 /**
