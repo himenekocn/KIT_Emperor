@@ -62,7 +62,7 @@ stock bool EMP_IsWeaponGrenade(int weaponEntity)
 	char weaponClass[64];
 	if (EMP_SetWeaponClassname(weaponEntity, weaponClass, sizeof(weaponClass)))
 	{
-		if (EMP_IsWeaponGrenade(weaponClass))
+		if (EMP_IsWeaponGrenadeClass(weaponClass))
 			return true;
 	}
 
