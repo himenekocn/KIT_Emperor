@@ -76,7 +76,7 @@ stock bool EMP_IsWeaponGrenade(int weaponEntity)
 *
 * @return				True if grenade, otherwise false
 */
-stock bool EMP_IsWeaponGrenade(const char[] weaponClass)
+stock bool EMP_IsWeaponGrenadeClass(const char[] weaponClass)
 {
 	if (EMP_StrEquals(weaponClass, "weapon_decoy") || EMP_StrEquals(weaponClass, "weapon_flashbang") ||EMP_StrEquals(weaponClass, "weapon_hegrenade") ||EMP_StrEquals(weaponClass, "weapon_incgrenade") ||EMP_StrEquals(weaponClass, "weapon_molotov") ||EMP_StrEquals(weaponClass, "weapon_smokegrenade") ||EMP_StrEquals(weaponClass, "weapon_tagrenade"))
 		return true;
